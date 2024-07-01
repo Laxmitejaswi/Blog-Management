@@ -12,7 +12,7 @@ const Articles = () => {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/articles');
+        const response = await fetch('https://blog-management-1.onrender.com/api/articles');
         const data = await response.json();
         if (response.ok) {
           setArticles(data.map(article => ({ ...article, isLiked: false, comments: [] })));
@@ -27,7 +27,7 @@ const Articles = () => {
     const fetchLikedArticles = async () => {
       if (username) {
         try {
-          const response = await fetch(`http://localhost:8000/api/users/${username}/liked-articles`);
+          const response = await fetch(`https://blog-management-1.onrender.com/api/users/${username}/liked-articles`);
           const likedarticles = await response.json();
           if (response.ok) {
             setIsLikedArticles(likedarticles);
@@ -67,7 +67,7 @@ const Articles = () => {
 
   const handleLike = async (articleName, a_id) => {
     try {
-      const response = await fetch(`http://localhost:8000/api/articles/${articleName}/like`, {
+      const response = await fetch(`https://blog-management-1.onrender.com/api/articles/${articleName}/like`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -93,7 +93,7 @@ const Articles = () => {
     e.preventDefault();
     const content = e.target.elements.comment.value;
     try {
-      const response = await fetch(`http://localhost:8000/api/articles/${articleName}/comment`, {
+      const response = await fetch(`https://blog-management-1.onrender.com/api/articles/${articleName}/comment`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -121,7 +121,7 @@ const Articles = () => {
 
   const handleFetchCommentsCount = async (articleName , commentsCount) => {
     try {
-      const response = await fetch(`http://localhost:8000/api/articles/${articleName}/comments`);
+      const response = await fetch(`https://blog-management-1.onrender.com/api/articles/${articleName}/comments`);
       const comments = await response.json();
       if (response.ok) {
         setArticles(articles.map(article =>
@@ -137,7 +137,7 @@ const Articles = () => {
 
   const handleFetchComments = async (articleName) => {
     try {
-      const response = await fetch(`http://localhost:8000/api/articles/${articleName}/comments`);
+      const response = await fetch(`https://blog-management-1.onrender.com/api/articles/${articleName}/comments`);
       const comments = await response.json();
       if (response.ok) {
         setArticles(articles.map(article =>

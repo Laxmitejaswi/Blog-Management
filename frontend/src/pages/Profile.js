@@ -13,7 +13,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchUserArticles = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/api/articles/${username}`);
+        const response = await fetch(`https://blog-management-1.onrender.com/api/articles/${username}`);
         if (response.ok) {
           const data = await response.json();
           setArticles(data); 
@@ -38,7 +38,7 @@ const Profile = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:8000/api/articles`, {
+      const response = await fetch(`https://blog-management-1.onrender.com/api/articles`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -61,7 +61,7 @@ const Profile = () => {
 
   const handleDelete = async (articleName) => {
     try {
-      const response = await fetch(`http://localhost:8000/api/articles/${articleName}`, {
+      const response = await fetch(`https://blog-management-1.onrender.com/api/articles/${articleName}`, {
         method: 'DELETE',
       });
       if (response.ok) {
@@ -84,7 +84,7 @@ const Profile = () => {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:8000/api/articles/${editArticle.name}`, {
+      const response = await fetch(`https://blog-management-1.onrender.com/api/articles/${editArticle.name}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'

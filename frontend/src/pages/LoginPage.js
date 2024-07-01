@@ -12,7 +12,7 @@ function LoginPage({ setIsLoggedIn }) {
   const handleLogin = async () => {
       const endpoint = isSignUp ? '/api/register' : '/api/login';
       try {
-          const response = await fetch(`http://localhost:8000${endpoint}`, {
+          const response = await fetch(`https://blog-management-1.onrender.com${endpoint}`, {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json'
