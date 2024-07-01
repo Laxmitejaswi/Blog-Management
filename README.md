@@ -2,7 +2,7 @@
 
 ## Live Demo
 
-Check out the deployed version of the project: [Blog Management Live Demo](https://blogmanagement.onrender.com)
+Check out the deployed version of the project: [Blog Management Live Demo](https://blog-management-2.onrender.com/)
 
 
 ## Technologies Used
