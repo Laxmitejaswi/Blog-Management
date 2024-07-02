@@ -63,18 +63,9 @@ Check out the deployed version of the project: [Blog Management Live Demo](https
 
 ### To Start the App
 
-1. Start the Backend Server
+1. Start the Frontend Server
 
-- Open a terminal and navigate to the backend directory, then run the following command to start the backend server:
-
-```bash
-cd backend
-npm run dev
-```
-
-2. Start the Frontend Server
-
-- Open another terminal and navigate to the frontend directory, then run the following command to start the frontend server:
+- Open terminal and navigate to the frontend directory, then run the following command to start the app:
 
 ```bash
 cd frontend
