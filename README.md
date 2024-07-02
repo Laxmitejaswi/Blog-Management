@@ -63,8 +63,6 @@ Check out the deployed version of the project: [Blog Management Live Demo](https
 
 ### To Start the App
 
-1. Start the Frontend Server
-
 - Open terminal and navigate to the frontend directory, then run the following command to start the app:
 
 ```bash
